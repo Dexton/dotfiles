@@ -20,10 +20,11 @@ set -u fish_user_paths $fish_user_paths ~/.rbenv/bin
 set -g -x PATH /usr/local/heroku/bin $PATH
 
 # Python config paths
-set -x CHARGER_CONFIG ~/Projects/charger/.mr.developer.cfg
-set -x USAGE_SERVICES_CONFIG ~/Projects/usage-services/.mr.developer.cfg
-set -x MEDIATOR_CONFIG ~/Projects/mediator/.mr.developer.cfg
+set -x CHARGER_CONFIG ~/projects/charger/.mr.developer.cfg
+set -x USAGE_SERVICES_CONFIG ~/projects/usage-services/.mr.developer.cfg
+set -x MEDIATOR_CONFIG ~/projects/mediator/.mr.developer.cfg
 
+set fish_greeting Taco Burrito Dale!
 # Startup with virtualenv
 eval (python -m virtualfish)
 
