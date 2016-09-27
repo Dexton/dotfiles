@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree'
+Plug 'lepture/vim-jinja'
 
 " Language specific
 Plug 'groenewege/vim-less', { 'for': 'less' }
@@ -23,8 +24,9 @@ Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'derekprior/vim-trimmer'
 Plug 'gregsexton/MatchTag', { 'for': ['html', 'eruby', 'jinja2'] }
 Plug 'tmhedberg/matchit', { 'for': 'ruby' }
-Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby'}
-Plug 'tpope/vim-fugitive', { 'for': 'ruby'}
+Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby' }
+Plug 'tpope/vim-fugitive', { 'for': 'ruby' }
+Plug 'rainerborene/vim-reek', { 'for': 'ruby' }
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }

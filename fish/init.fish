@@ -6,9 +6,6 @@ export CENTER_HOST='http://ops-stg.365.is' # 'http://center.dev'
 export KEYSTORE_HOST='http://localhost:3002' # 'http://center.dev'
 export GOPATH='/home/arnthor/code/'
 
-# Add spotify-notify path
-set -g -x PATH /opt/spotify-notify/ $PATH
-
 # Add .local/bin for my own scripts
 set -g -x PATH /home/arnthor/.local/bin $PATH
 

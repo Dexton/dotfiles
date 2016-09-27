@@ -1,0 +1,3 @@
+# Bit looser statement limit
+TooManyStatements:
+  max_statements: 15
