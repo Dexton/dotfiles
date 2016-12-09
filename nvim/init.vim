@@ -9,6 +9,8 @@ Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree'
 Plug 'lepture/vim-jinja'
+Plug 'mhinz/vim-startify'
+Plug 'derekprior/vim-trimmer'
 
 " Language specific
 Plug 'groenewege/vim-less', { 'for': 'less' }
@@ -16,12 +18,10 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'exu/pgsql.vim', { 'for': 'pgsql' }
 Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja2'}
-Plug 'vim-ruby/vim-ruby'
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby'}
 Plug 'slim-template/vim-slim', { 'for': 'slim' }
-Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'hdima/python-syntax', { 'for': 'python' }
 Plug 'elzr/vim-json', { 'for': 'json' }
-Plug 'derekprior/vim-trimmer'
 Plug 'gregsexton/MatchTag', { 'for': ['html', 'eruby', 'jinja2'] }
 Plug 'tmhedberg/matchit', { 'for': 'ruby' }
 Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby' }
@@ -29,10 +29,8 @@ Plug 'tpope/vim-fugitive', { 'for': 'ruby' }
 Plug 'rainerborene/vim-reek', { 'for': 'ruby' }
 
 " Fuzzy finder
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
-
-" Memo tool
-Plug 'glidenote/memolist.vim'
 
 " Unite
 "Plug 'Shougo/vimproc.vim', { 'do': 'make' }
@@ -43,8 +41,9 @@ Plug 'mkarmona/colorsbox'
 Plug 'chankaward/vim-railscasts-theme'
 Plug 'altercation/vim-colors-solarized'
 
-" Salesforce
-Plug 'neowit/vim-force.com'
+" Fonts n' Stuffs
+Plug 'ryanoasis/nerd-fonts'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -166,6 +165,7 @@ nnoremap <Leader>D "+D
 
 nnoremap <Leader>p "+p
 nnoremap <Leader>P "+P
+nnoremap <C-s> :Startify<CR>
 
 " Toggle paste mode
 "set pastetoggle=<Leader>p
@@ -261,6 +261,18 @@ autocmd BufRead,BufNewFile,BufEnter *.slim set filetype=slim
 """ FZF
 nnoremap <Leader>f :FZF<CR>
 
+""" Startify
+let g:startify_list_order = [
+        \ ['   These are my sessions:'],
+        \ 'sessions',
+        \ ['   My most recently', '   used files'],
+        \ 'files',
+        \ ['   These are my bookmarks:'],
+        \ 'bookmarks',
+        \ ]
+
+let g:startify_bookmarks = [ { 'n': '~/.config/nvim/init.vim'}, { 'g': '~/.gitconfig'}, { 'p': '~/projects/'}, { 'd': '~/dotfiles/'}]
+
 """ Airline
 let g:airline_powerline_fonts = 1
 
@@ -276,4 +288,8 @@ let g:apex_API_version = "31.0"
 
 """ vim-json
 let g:vim_json_syntax_conceal = 0
+
+""" Dev Icons
+set encoding=utf8
+
 " }}}
