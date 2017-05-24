@@ -26,7 +26,6 @@ Plug 'gregsexton/MatchTag', { 'for': ['html', 'eruby', 'jinja2'] }
 Plug 'tmhedberg/matchit', { 'for': 'ruby' }
 Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby' }
 Plug 'tpope/vim-fugitive', { 'for': 'ruby' }
-Plug 'rainerborene/vim-reek', { 'for': 'ruby' }
 
 " Fuzzy finder
 Plug 'ctrlpvim/ctrlp.vim'
@@ -272,6 +271,10 @@ let g:startify_list_order = [
         \ ]
 
 let g:startify_bookmarks = [ { 'n': '~/.config/nvim/init.vim'}, { 'g': '~/.gitconfig'}, { 'p': '~/projects/'}, { 'd': '~/dotfiles/'}]
+
+""" Vim-reek
+let g:reek_always_show = 1
+let g:reek_line_limit = 2000
 
 """ Airline
 let g:airline_powerline_fonts = 1
