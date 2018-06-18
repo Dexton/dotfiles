@@ -17,6 +17,10 @@ set -u fish_user_paths $fish_user_paths ~/.rbenv/bin
 . (rbenv init -|psub)
 
 
+# Because aparently Microsoft wants me to live dangerously
+set -x ASPNETCORE_ENVIRONMENT development
+
+# Greating
 set fish_greeting Taco Burrito Dale!
 # Startup with virtualenv
 eval (python -m virtualfish)
